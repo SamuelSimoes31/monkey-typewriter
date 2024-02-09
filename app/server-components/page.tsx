@@ -22,6 +22,10 @@ export default async function Page({
     stream: true,
     messages: [
       {
+        role: 'system',
+        content: "You are a master storyteller, you will receive an input with a description of the characters and what the history will be about. You can add other characters, but you need to focus on the parameters passed from the user."
+      },
+      {
         role: 'user',
         content:
           searchParams['prompt'] ?? 'Give me code for generating a JSX button',
